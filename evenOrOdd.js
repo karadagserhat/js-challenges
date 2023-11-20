@@ -10,4 +10,4 @@ function sum(num) {
   return res % 2 === 0 ? 'EVEN' : 'ODD';
 }
 
-console.log(sum(745));
+console.log(sum(112));
