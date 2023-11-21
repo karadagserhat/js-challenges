@@ -24,7 +24,7 @@ let products = [
 function getUnique(arr) {
   return [...arr.reduce((acc, curr) => acc.add(curr.company), new Set())];
 
-  return new Set(products.map((item) => item.company));
+  return new Set(arr.map((item) => item.company));
 
   let tempArr = arr.map((item) => item.company);
   return [...new Set(tempArr)];
