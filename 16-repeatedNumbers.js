@@ -1,5 +1,6 @@
 function testRepeat(arr) {
   let nums = [...new Set(arr)];
+  console.log(nums);
   let numCount = nums.reduce((acc, num) => {
     acc.push({ num, count: arr.filter((x) => x === num).length });
 
@@ -7,6 +8,8 @@ function testRepeat(arr) {
 
     return acc;
   }, []);
+
+  console.log(numCount);
 
   let sortedNumCount = numCount.sort((a, b) => b.count - a.count);
 

@@ -28,3 +28,94 @@
 /*************** */
 // 5- evenOrOdd
 // console.log(sum(112)); 1+ 1+ 2 -> "EVEN"
+
+/************** */
+// 6- longest word
+// console.log(longestWord('I woke up early today'));
+
+/*************** */
+// 7- mathSequence
+//console.log(mathSequence([2, 4, 6, 8]));
+// Arithmetic
+//console.log(mathSequence([3, 9, 27]));
+// Geometric
+// console.log(mathSequence([2, 5, 14, 89]));
+// -1
+
+/************* */
+// 8- longestWords
+// console.log(longestWords('I woke up early today'));
+// console.log(longestWords('I went straight to the beach'));
+
+/************ */
+// 9- capitalizeFirstLetter
+// console.log(capitalizeWords('I got up early today'));
+
+/*********** */
+// 10- uniqueValues
+//console.log(unique('abcde')); // true
+
+/*********** */
+// 11- arraySum
+//console.log(arraySum([1, 2, 4, 6, 13]));
+// true 1+2+4+6=13
+
+/*********** */
+// 12- uniqueValuesWithSet
+// console.log(unique('abcda')); // false
+
+/*********** */
+// 13-uniqueObjectPropertyValues
+
+/********** */
+// 14- counting Letters
+// console.log(countLetters('Javascript is the greatest programming language'));
+
+/************ */
+// 15- secondValue
+// console.log(secondValue([3, 2, 88, 3, -11, 67, 7])); //-11,2,3,7,67,88 -> 2 67
+
+/******** */
+// 16- repeatedNumbers ?????
+
+/********** */
+// 17- prime Numbers
+// console.log(isPrime(8));
+
+/*********** */
+// 18- count Letters
+// console.log(countLetters3('ffffeerttttooo'));
+// 4f2e1r4t30
+
+function countLetters3(str) {
+  let tempArr = str.split('');
+  let count = 1;
+  const arr = [];
+
+  for (let i = 0; i < tempArr.length; i++) {
+    if (tempArr[i] === tempArr[i + 1]) count++;
+    else {
+      let value = `${count}${tempArr[i]}`;
+      console.log(value);
+      arr.push(value);
+      count = 1;
+    }
+  }
+
+  return arr.join('');
+}
+
+console.log(countLetters3('ffffeerttttooo'));
+
+/************ */
+// 19- regexPalindrome
+// console.log(checkPalindrome('Was it a car or a cat I saw'));
+//console.log(checkPalindrome('Red -rum-, sir, -is-murder'));
+
+function checkPalindrome(str) {
+  let tempStr = str.replace(/\W/gi, '').toLowerCase();
+  return tempStr.split('').reverse().join('') === tempStr;
+}
+
+console.log(checkPalindrome('Was it a car or a cat I saw'));
+console.log(checkPalindrome('Red -rum-, sir,, -is-murder'));

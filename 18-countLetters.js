@@ -25,6 +25,7 @@ function countLetters2(str) {
   let letts = str[0];
   let count = 0;
   let result = '';
+  console.log(str);
   for (let char of str) {
     if (letts === char) {
       count++;
@@ -32,6 +33,7 @@ function countLetters2(str) {
       result += `${count}${letts}`;
       letts = char;
       count = 1;
+      console.log(result);
     }
   }
   return result;
@@ -40,7 +42,11 @@ function countLetters2(str) {
 /*************** */
 function countLetters3(str) {
   let obj = {};
-  str.split('').forEach((l) => (obj[l] ? obj[l]++ : (obj[l] = 1)));
+  // str.split('').forEach((l) => (obj[l] ? obj[l]++ : (obj[l] = 1)));
+  str.split('').forEach((l) => (obj[l] = obj[l] + 1 || 1));
+  console.log(str);
+  console.log(obj);
+  console.log(Object.entries(obj));
   return Object.entries(obj).reduce(
     (total, entry) => total + entry[1] + entry[0],
     ''
