@@ -87,35 +87,7 @@
 // console.log(countLetters3('ffffeerttttooo'));
 // 4f2e1r4t30
 
-function countLetters3(str) {
-  let tempArr = str.split('');
-  let count = 1;
-  const arr = [];
-
-  for (let i = 0; i < tempArr.length; i++) {
-    if (tempArr[i] === tempArr[i + 1]) count++;
-    else {
-      let value = `${count}${tempArr[i]}`;
-      console.log(value);
-      arr.push(value);
-      count = 1;
-    }
-  }
-
-  return arr.join('');
-}
-
-console.log(countLetters3('ffffeerttttooo'));
-
 /************ */
 // 19- regexPalindrome
 // console.log(checkPalindrome('Was it a car or a cat I saw'));
 //console.log(checkPalindrome('Red -rum-, sir, -is-murder'));
-
-function checkPalindrome(str) {
-  let tempStr = str.replace(/\W/gi, '').toLowerCase();
-  return tempStr.split('').reverse().join('') === tempStr;
-}
-
-console.log(checkPalindrome('Was it a car or a cat I saw'));
-console.log(checkPalindrome('Red -rum-, sir,, -is-murder'));
