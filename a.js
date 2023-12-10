@@ -91,3 +91,11 @@
 // 19- regexPalindrome
 // console.log(checkPalindrome('Was it a car or a cat I saw'));
 //console.log(checkPalindrome('Red -rum-, sir, -is-murder'));
+
+/*********** */
+// perfectNumber
+// console.log(perfect(28));
+
+/************** */
+// findSecondLargest
+// console.log(findSecondLargest([5, 2, 10, 8, 3]));
